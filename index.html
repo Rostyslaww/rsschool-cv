@@ -3,6 +3,10 @@
 <head>
     <title>Rostyslav's CV</title>
     <style>
+        body {
+            background-color:rgb(247, 252, 192);
+            overflow-x: hidden;
+        }
         .image {
             border-radius: 100px;
             border: 2px solid rgb(95, 95, 95);
@@ -11,13 +15,13 @@
         #name {
             position: absolute;
             right: 360px;
-            top: 38px;
+            top: 90px;
             color:rgb(91, 89, 0);
         } 
         #job {
             position: absolute;
             right: 438px;
-            top: 105px;
+            top: 145px;
             color:rgb(36, 93, 8);
         }
         #contacts {
@@ -53,7 +57,7 @@
         #line {
             position: absolute;
             border: none;
-            top:95px;
+            top:140px;
             left:551px;
         }
         #education {
@@ -98,45 +102,118 @@
             top: 632px;
             color:rgb(0, 0, 0); 
         }
+        #wrapper {
+        position: absolute;
+        display: block;
+        min-width: 1263px;
+        min-height: 700px;
+        }
+        #header {
+            background-color: rgb(88, 95, 99);
+            display: block
+        }
+        #headcontainer {
+            background-color:rgb(0, 101, 69);
+            padding: 0 20px;
+            max-width: 1440px;
+            margin: 0 auto;
+            min-height: 70px;
+            
+        }
+        #headlist {
+            position: absolute;
+            margin: 0;
+            padding: 4px;
+            top: 13px;
+            right: 40px;
+            z-index: 1;
+        }
+        #headitem {
+            display: inline;
+            margin-right: 5px;
+            padding: 3px;
+        }
+        a {
+            text-decoration: none;
+            color:#99cc00;
+        }
+        #cont {
+            color:rgb(19, 0, 127);
+        }
+        #headline {
+            position: absolute;
+            border: none;
+            top:-30px;
+            left:-20px;
+            width: 1283px;
+            height: 92px;
+            z-index: -1;
+        }
     </style>
 </head>
 <bod>
-    <img class="image" src="https://kartinkin.net/uploads/posts/2022-03/thumbs/1647043428_2-kartinkin-net-p-kartinki-programmista-2.jpg" width="110" height="110" alt="PhotoOfRostyslav." align="left" vspace="30" hspace="230">
-    <pre id="name" style="font-family:Tahoma"><font size="5">R O S T Y S L A V  S A M C H E N K O</font></pre>
-    <p id="job" style="font-family:Tahoma"><font size="4">JUNIOR BACK-END DEVELOPER</font></p>
-    <p id="contacts" align="left" style="font-family:Tahoma"><font size="3">C O N T A C T S</font></p>
-    <p id="skills" align="left" style="font-family:Tahoma"><font size="3">S K I L L S</font></p>
-    <p id="summary" align="right" style="font-family:Tahoma"><font size="3">S U M M A R Y</font></p>
-    <p id="courses" align="right" style="font-family:Tahoma"><font size="3">C O U R S E S</font></p>
-    <p id="education" align="right" style="font-family:Tahoma"><font size="3">E D U C A T I O N</font></p>
-    <p id="english" align="right" style="font-family:Tahoma"><font size="3">E N G L I S H</font></p>
-    <hr align="left" width="300" size="4" color="#99cc00" id="line"/>
-    <br />
-    <p id="summ" style="font-family:Courier"><font size="2">I love programming. Programming relaxes me. I have taken many courses in different fields of programming. All this time programming has been a hobby for me but now I want to make it my main job. My goal is to improve in programming more and more. I would be happy to work in a team with experienced developers to learn a lot from them and maybe teach them something.</font></p>
-    <nav id="contc">
-        <ul style="font-family:Courier">
-            <li>Kharkiv, Ukraine</li>
-            <li><a href="https://github.com/Rostyslaww">GitHub</a></li>
-            <li><a href="https://t.me/maybeuleave">Telergam</a></li>
-            <li>Discord: may be#0262</li>
-        </ul>
-    </nav>
-    <nav id="skil">
-        <ul style="font-family:Courier">
-            <li>Web-development: HTML5, CSS3, JavaScript</li>
-            <li>Frameworks and libraries: React</li>
-            <li>Graphics: Figma</li>
-        </ul>
-    </nav>
-    <nav id="cours">
-        <ul style="font-family:Courier">
-            <li>Mate academy - Java Basic course</li>
-            <li>Web acedemy - HTML+CSS+JavaScript course</li>
-            <li>IT Step - Web design</li>
-            <li>SkillBox - Python Developer</li>
-        </ul>
-    </nav>
-    <p id="educat" style="font-family:Courier"><font size="3">Kharkiv National University named after V. N. Karazin.<br> Faculty of Computer Science</font></p>
-    <p id="engl" style="font-family:Courier"><font size="3">B1 - Intermediate</font></p>
+    <div id="wrapper">
+        <header id="header">
+            <div id="headcontainer">
+                <nav id="nav">
+                    <ul id="headlist"><font size="5">
+                        <li id="headitem"><a href="#contacts">Contacts</a></li>
+                        <li id="headitem"><a href="#summary">Summary</a></li>
+                        <li id="headitem"><a href="#skills">Skills</a></li>
+                        <li id="headitem"><a href="#courses">Courses</a></li>
+                        <li id="headitem"><a href="#education">Education</a></li>
+                        <li id="headitem"><a href="#english">English</a></li>
+                    </font></ul>
+                </nav>
+            </div>
+        </header>
+
+
+        <img class="image" src="https://kartinkin.net/uploads/posts/2022-03/thumbs/1647043428_2-kartinkin-net-p-kartinki-programmista-2.jpg" width="125" height="125" alt="PhotoOfRostyslav." align="left" vspace="20" hspace="300">
+        <pre id="name" style="font-family:Tahoma"><font size="5">R O S T Y S L A V  S A M C H E N K O</font></pre>
+        <p id="job" style="font-family:Tahoma"><font size="4">JUNIOR BACK-END DEVELOPER</font></p>
+        <p id="contacts" align="left" style="font-family:Tahoma"><font size="3">C O N T A C T S</font></p>
+        <p id="skills" align="left" style="font-family:Tahoma"><font size="3">S K I L L S</font></p>
+        <p id="summary" align="right" style="font-family:Tahoma"><font size="3">S U M M A R Y</font></p>
+        <p id="courses" align="right" style="font-family:Tahoma"><font size="3">C O U R S E S</font></p>
+        <p id="education" align="right" style="font-family:Tahoma"><font size="3">E D U C A T I O N</font></p>
+        <p id="english" align="right" style="font-family:Tahoma"><font size="3">E N G L I S H</font></p>
+        <hr align="left" width="300" size="4" color="#99cc00" id="line"/>
+        <br />
+        <hr align="left" width="300" size="4" color="#006545" id="headline"/>
+        <br />
+        <p id="summ" style="font-family:Courier"><font size="2">I love programming. Programming relaxes me. I have taken many courses in different fields of programming. All this time programming has been a hobby for me but now I want to make it my main job. My goal is to improve in programming more and more. I would be happy to work in a team with experienced developers to learn a lot from them and maybe teach them something.</font></p>
+        <nav id="contc">
+            <ul style="font-family:Courier">
+                <li>Kharkiv, Ukraine</li>
+                <li>GitHub: <a id="cont" href="https://github.com/Rostyslaww">Rostyslaww</a></li>
+                <li>Telergam: <a id="cont" href="https://t.me/maybeuleave">maybeuleave</a></li>
+                <li>Discord: may be#0262</li>
+            </ul>
+        </nav>
+        <nav id="skil">
+            <ul style="font-family:Courier">
+                <li>Web-development: HTML5, CSS3, JavaScript</li>
+                <li>Frameworks and libraries: React</li>
+                <li>Graphics: Figma</li>
+            </ul>
+        </nav>
+        <nav id="cours">
+            <ul style="font-family:Courier">
+                <li>Mate academy - Java Basic course</li>
+                <li>Web acedemy - HTML+CSS+JavaScript course</li>
+                <li>IT Step - Web design</li>
+                <li>SkillBox - Python Developer</li>
+            </ul>
+        </nav>
+        <p id="educat" style="font-family:Courier"><font size="3">Kharkiv National University named after V. N. Karazin.<br> Faculty of Computer Science</font></p>
+        <p id="engl" style="font-family:Courier"><font size="3">B1 - Intermediate</font></p>
+        <footer id="footer">
+            <div id="footconteiner">
+                <div id="2022">© 2022<a href="https://github.com/Rostyslaww"> Rostyslaw</a></div>
+                <a id="rsurl" href="https://rs.school/js/"></a>
+            </div>
+        </footer>
+    </div>
 </body>
 </html>
