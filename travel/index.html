@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Portal</title>
+    <link rel="stylesheet" href="css/style_slader8.css">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            background-color:rgb(255, 255, 255);
+            overflow-x: hidden;
+            height: 100%;
+        }
+        html {
+            scroll-behavior: smooth; 
+            height: 100%;
+        }
+
+        @font-face {
+            font-family: "RedHatText-Medium";
+            src: url(rsschool-cv\travel\Fonts\RedHatText-Medium.woff);
+        }
+        @font-face {
+            font-family: "Aleo-BoldItalic";
+            src: url(rsschool-cv\travel\Fonts\fonts-aleo\Aleo-BoldItalic.tff);
+        }
+        #wrapper {
+            min-height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        #headcontainer {
+            display: flex;
+            justify-content: center;
+            background-color: rgba(242,120,92, 0.7);
+            min-width: 1440px;
+            min-height: 90px;
+            align-items: center;
+            box-shadow: 0 6px 4px -4px rgba(19, 126, 145, 0.4);
+            border: none;
+            margin-top: -1%;
+            margin-left: -1%;
+        }
+        #main {
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            min-width: 1440px;
+            align-items: center;
+            min-height: none;
+            text-align: center;
+        }
+        #login {
+            display: flex;
+            align-items: center;
+            background-color:#0D606F;
+            justify-content: center;
+            min-width: 103px;
+            min-height: 30px;
+            color: #FFFF;
+            border-radius: 7px;
+            border: 0px solid rgb(95, 95, 95);
+            box-shadow: 0 0 7px rgb(36, 36, 36);
+            transition: color 0.5s;
+            transition: .3s;
+            margin-right: 0px;
+            margin-left: 200px;
+            margin-top: 8px;
+        }
+        #login:hover {
+            color: #28302a;
+        }
+        .headlist {
+            display: flex;
+            justify-content: center;
+            margin-left: 160px;
+            margin-right: 0px;
+            align-items: center;
+            top: 14px;
+            left: -60px;
+            margin-top: 8px
+        }
+        #headitem {
+            display: inline;
+            margin-right: 20px;
+            padding: 10px;
+        }
+        a {
+            text-decoration: none;
+            color:#FFFF;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            text-decoration: none;  
+            transition: color 0.5s;
+            transition: .3s;
+        }
+        a:hover {
+            color: #28302a;
+        }
+        #headimg {
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            min-width: 1440;
+            min-height: 765;
+            z-index: -1;
+            top: 10px;
+            margin: auto;
+            margin-top: -1%;
+            margin-left: -1%;
+        }
+        #logo {
+            display: inline;
+            position: absolute;
+            color: #FFFF;
+            min-width: 220px;
+            min-height: 35px;
+            margin: auto;
+            padding: 3px;
+
+        }
+        #logoimg {
+            position: absolute;
+            left: -520px;
+            bottom: 0px;
+
+        }
+        #logoname {
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            left: -480px;
+            bottom: -29px;
+            font-size: 32px;
+            font-family: "MagraBold";
+        }
+        #planname {
+            position: absolute;
+            display: flex;
+            justify-content: flex-start;
+            color: #FFFF;
+            margin: 0px;
+            top: 30px;
+            left: 190px;
+            font-size: 80px;
+            font-family: "Aleo-BoldItalic";
+        }
+        #planname2 {
+            position: absolute;
+            display: flex;
+            justify-content: flex-start;
+            color: #FFFF;
+            margin: 0px;
+            top: 135px;
+            left: 190px;
+            font-size: 80px;
+        }
+        #plantext {
+            color: #FFFF;
+        }
+        #plantypetext {
+            color: #F2785C;
+            margin-left: 35px;
+            font-size: 24px;
+        }
+        #plantypecont {
+            position: absolute;
+            display: flex;
+            justify-content: flex-start;
+            background-color: rgb(255, 255, 255, 0.7);
+            min-width: 892px;
+            min-height: 95px;
+            border-radius: 17px;
+            align-items:center;
+            top: 350px;
+            left: 186px;
+            
+
+        }
+        #planbutton {
+            display: flex;
+            justify-content: center;
+            background-color: rgba(242,120,92, 0.7);
+            min-width: 1440px;
+            min-height: 90px;
+            align-items: center;
+            box-shadow: 0 6px 4px -4px rgba(19, 126, 145, 0.4);
+            border: none;
+            margin-top: -1%;
+            margin-left: -1%;
+
+        }
+        #planbutton {
+            position: absolute;
+            display: flex;
+            align-items: center;
+            background-color:#0D606F;
+            justify-content: center;
+            min-width: 228px;
+            min-height: 59px;
+            color: #FFFF;
+            border-radius: 15px;
+            border: 0px solid rgb(95, 95, 95);
+            transition: color 0.5s;
+            transition: .3s;
+            margin-left: 640px;
+            top: 27px;
+            font-size: 24px;
+        }
+        #planbutton:hover {
+            color: #28302a;
+        }
+        #planyourtrip {
+            position: absolute;
+            display: flex;
+            justify-content:center ;
+            margin: 0px;
+            min-width: 892px;
+            min-height: 422px;
+            left: 51px;
+            align-items: center;
+            top: 78px;
+        }
+        #plantext {
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            left: 190px;
+            top: 250px;
+            font-size: 20px;
+        }
+        input::placeholder {
+            color: #F2785C;
+            font-size: 20px;
+        }
+        #inputplan {
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            background: transparent;
+            border: none;
+            border-bottom: 0px solid #fff;
+            min-width: 560px;
+            min-height: 22px;
+            outline: none;
+            left: 20px;
+            font-size: 20px;
+        }
+        #navmainlist-item {
+            display: inline-block;
+            min-height: 52px;
+            color: #0d606f;
+            font-size: 20px;
+        }
+        #howitworks {
+            position: absolute;
+            display: flex;
+            justify-content: flex-start;
+        }
+        #navmainlist {
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            min-width: 1440px;
+            top: 985px;
+            left: -76px;
+        }
+        #navliststep {
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            min-width: 1440px;
+            min-height: 100px;
+            top: 878px; 
+            left: -505px;
+        }
+        #step-item {
+            display: inline;
+        }
+        #stepimg {
+            position: absolute;
+            display: inline;
+            margin-bottom: 30px;
+        }
+        #navlinklist {
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            min-width: 1440px;
+            left: 59px;
+            top: 903px;
+        }
+        #linkstep-item {
+            display: inline-block;
+            margin-right: 231px;
+            min-width: 65px;
+            min-height: 52px;
+        }
+        #steps {
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            color: #F2785C;
+            font-size: 40px;
+            min-width: 630px;
+            min-height: 53px;
+            left: 387px;
+            top: 752px;
+        }
+        #stepfonimg1 {
+            min-width: 100px;
+            min-height: 100px;
+        }
+        #stepfonimg2 {
+            position: absolute;
+            min-width: 100px;
+            min-height: 100px;
+            left: 1133px;
+        }
+        #stepfonimg3 {
+            position: absolute;
+            min-width: 100px;
+            min-height: 100px;
+            left: 1540px;
+        }
+        #steptext1 {
+            margin-right: 231px;
+        }
+        #steptext2 {
+            margin-right: 160px;
+        }
+        #stepimg2 {
+            position: absolute;
+            left: 592px;
+        }
+        #stepimg1 {
+            position: absolute;
+            left: 149px;
+            bottom:  27px;
+        }
+        #stepimg3 {
+            position: absolute;
+            left: 995px;
+            bottom:  27px;
+        }
+        #destin {
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            color: #F2785C;
+            font-size: 40px;
+            min-width: 630px;
+            min-height: 53px;
+            left: 386px;
+            top: 1088px;
+        }
+        #stor {
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            color: #F2785C;
+            font-size: 40px;
+            min-width: 630px;
+            min-height: 53px;
+            left: 387px;
+            top: 2218px;
+        }
+        #storimg {
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            min-width: 1440px;
+            min-height: 1331px;
+            z-index: -1;
+            bottom: -3000px;
+            margin-top: 0;
+            margin-left: 0;
+            color:#FFFF;
+            opacity: 70%;
+            align-items: center;
+            left: 100px;
+        }
+        #footimg {
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            min-width: 1440;
+            min-height: 765;
+            z-index: -1;
+            margin: auto;
+            margin-top: -1%;
+            margin-left: -1%;
+            top: 2404px;
+        }
+        #footcolor {
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            min-width: 1440;
+            min-height: 765;
+            z-index: 0;
+            margin: auto;
+            margin-top: -1%;
+            margin-left: -1%;
+            top: 2404px;
+        }
+        #storbutton {
+            position: absolute;
+            display: flex;
+            align-items: center;
+            background-color:#0D606F;
+            justify-content: center;
+            min-width: 228px;
+            min-height: 59px;
+            color: #FFFF;
+            border-radius: 10px;
+            border: 0px solid rgb(95, 95, 95);
+            transition: color 0.5s;
+            transition: .3s;
+            margin-left: 0px;
+            font-size: 24px;
+            left: 583px;
+            top: 3520px;
+        }
+        #storbutton:hover {
+            color: #28302a;
+        }
+        #stor1name {
+            position: absolute;
+            font-size: 35px;
+            color: #0D606F;
+            top: 2348px;
+            left: 533px;
+        }
+        #stor1 {
+            position: absolute;
+            font-size: 20px;
+            color: #0D606F;
+            top: 2454px;
+            left: 533px;
+            text-align: start;
+        }
+        #stor1img {
+            position: absolute;
+            top: 2390px;
+            left: 88px;
+            text-align: start;
+        }
+        #stor2name {
+            position: absolute;
+            font-size: 35px;
+            color: #0D606F;
+            top: 2628px;
+            left: 533px;
+        }
+        #stor2 {
+            position: absolute;
+            font-size: 20px;
+            color: #0D606F;
+            top: 2734px;
+            left: 533px;
+            text-align: start;
+        }
+        #stor2img {
+            position: absolute;
+            top: 2670px;
+            left: 88px;
+            text-align: start;
+        }
+        #stor3name {
+            position: absolute;
+            font-size: 35px;
+            color: #0D606F;
+            top: 2908px;
+            left: 533px;
+        }
+        #stor3 {
+            position: absolute;
+            font-size: 20px;
+            color: #0D606F;
+            top: 3014px;
+            left: 533px;
+            text-align: start;
+        }
+        #stor3img {
+            position: absolute;
+            top: 2950px;
+            left: 88px;
+            text-align: start;
+        }
+        #stor4name {
+            position: absolute;
+            font-size: 35px;
+            color: #0D606F;
+            top: 3188px;
+            left: 533px;
+        }
+        #stor4 {
+            position: absolute;
+            font-size: 20px;
+            color: #0D606F;
+            top: 3294px;
+            left: 533px;
+            text-align: start;
+        }
+        #stor4img {
+            position: absolute;
+            top: 3230px;
+            left: 88px;
+            text-align: start;
+        }
+        #urlfootlist {
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            min-width: 300px;
+            margin-top:3540px;
+            text-decoration: none;
+        }
+        #urlfoot-item {
+            display: inline-block;
+            padding: 6px;
+        }
+        #urlimg1 {
+            position: absolute;
+            right: 358px;
+            bottom: -62px;
+        }
+        #urlimg2 {
+            position: absolute;
+            right: 302px;
+            bottom: -62px;
+        }
+        #urlimg3 {
+            position: absolute;
+            right: 246px;
+            bottom: -62px;
+        }
+        #foottext {
+            position: absolute;
+            font-size: 16px;
+            color:rgb(255, 255, 255);
+            bottom: -70px;
+            min-width: 300px;
+            right: 673px;
+            text-decoration: none;
+        }
+        #destbutton {
+            position: absolute;
+            display: flex;
+            align-items: center;
+            background-color:#0D606F;
+            justify-content: center;
+            min-width: 228px;
+            min-height: 59px;
+            color: #FFFF;
+            border-radius: 10px;
+            border: 0px solid rgb(95, 95, 95);
+            transition: color 0.5s;
+            transition: .3s;
+            margin-left: 0px;
+            font-size: 24px;
+            left: 583px;
+            top: 2120px;
+        }
+        #destbutton:hover {
+            color: #28302a;
+        }
+        .section-g {
+            height: 800px;
+            background-color: #000;
+            position: absolute;
+            margin-right: 32px;
+            margin-top: 1680px;
+        }
+        .content-g {
+            width: 1280px/1366px * 100%;
+            max-width: 1366px;
+            margin: 0 auto;
+        }
+        .slider{
+            width: 1440px;
+            height: 800px;
+    
+            border: 1px solid white;   
+        }
+        .middle{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, 50%);
+        }
+        .navigation{
+            position: absolute;
+            bottom: -50px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+        }
+        .bar{       
+            height: 20px;
+            width: 20px;
+            margin: 10px;
+            cursor: pointer;
+            background-color: #F2785C;
+            opacity: .5;
+            border-radius: 50%;
+            transition: all .4s ease;
+        }
+        .bar:hover{
+            opacity: 1;
+            transform: scale(1.1);
+        }
+        input[name="r"] {
+            position: absolute;
+            visibility: hidden;
+        }
+
+        .slides{
+            width: 300%;
+            height: 100%;
+            display: flex;
+        }
+        .slide{
+            width: 33.3%;
+            transition: all .6s ease; 
+
+        }
+        .slide img{
+            width: 100%;
+            height: 100%;
+        }
+
+        #r1:checked ~ .s1 {
+            margin-left: 0;
+        }
+
+        #r2:checked ~ .s1 {
+            margin-left: -33.3%;
+        }
+
+        #r3:checked ~ .s1 {
+            margin-left: -66.6%;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+        <header id="header">
+            <div id="headcontainer">
+                <img src="E:\Microsoft VS Code\RS SCHOOL TASKS\rsschool-cv\travel\img\garrett-parker-DlkF4-dbCOU-unsplash 1.png" alt="garrett-parker" id="headimg">
+                <div id="logo"><font size="4"><img src="E:\Microsoft VS Code\RS SCHOOL TASKS\rsschool-cv\travel\img\Vector.png" alt="" id="logoimg" width="30" height="30"><h2 id="logoname">Travel Portal</h2></font></div>
+                <nav class="headlist"><font size="4">
+                    <ul>
+                        <li id="headitem"><a href="#steps">How It Works</a></li>
+                        <li id="headitem"><a href="#planyourtrip" id="urlpl">Plan Your Trip</a></li>
+                        <li id="headitem"><a href="#destin">Destinations</a></li>
+                        <li id="headitem"><a href="#stor">Travel Stories</a></li>
+                    </ul>
+                </font></nav>
+                <button onclick="login" id="login" align="right" ><font size="3">Login</font></button>
+                <img src="E:\Microsoft VS Code\RS SCHOOL TASKS\rsschool-cv\travel\img\Rectangle33.png" alt="" id="footimg">
+                <img src="E:\Microsoft VS Code\RS SCHOOL TASKS\rsschool-cv\travel\img\bg (1).png" alt="" id="footcolor">
+                <main id="main">
+                    <div id="planyourtrip">
+                        <h1 id="planname">Explore the beauty</h1>
+                        <h1 id="planname2">of the World</h1>
+                        <p id="plantext" >Receive personalized recommendations for countries, hotels, activities and more</p>
+                        <div id="plantypecont"><input type="text" id="inputplan"  action="#" placeholder="What would you like to do?"><button onclick="plan()" action="#" id="planbutton">Start Planning</button></div>
+                    </div>
+                    <div id="#howitworks">
+                        <h3 id="steps">3 STEPS TO THE PERFECT TRIP</h3>
+                        <nav id="navmainlist">
+                            <ul id="navstep">
+                                <li id="navmainlist-item"><p  id="steptext1"  >Tell us what you want to do</p></li>
+                                <li id="navmainlist-item"><p  id="steptext2"  >Share us preferable dates</p></li>
+                                <li id="navmainlist-item"><p  id="steptext3"  >We will give you recommendations</p></li>
+                            </ul>
+                        </nav>
+                        <nav id="navliststep">
+                            <ul id="navstep">
+                                <li id="step-item"><img id="stepfonimg1" src="E:\Microsoft VS Code\RS SCHOOL TASKS\rsschool-cv\travel\img\Rectangle 13.png" alt=""></li>
+                                <li id="step-item"><img id="stepfonimg2" src="E:\Microsoft VS Code\RS SCHOOL TASKS\rsschool-cv\travel\img\Rectangle 13 (1).png" alt=""></li>
+                                <li id="step-item"><img id="stepfonimg3" src="E:\Microsoft VS Code\RS SCHOOL TASKS\rsschool-cv\travel\img\Rectangle 13 (2).png" alt=""></li>
+                            </ul>
+                        </nav>
+                        <nav id="navlinklist">
+                            <ul id="navstep">
+                                <li id="linkstep-item"><a href=""><img id="stepimg1" src="E:\Microsoft VS Code\RS SCHOOL TASKS\rsschool-cv\travel\img\Vector (2).png" alt=""></a></li>
+                                <li id="linkstep-item"><a href=""><img id="stepimg2" src="E:\Microsoft VS Code\RS SCHOOL TASKS\rsschool-cv\travel\img\Vector (3).png" alt=""></a></li>
+                                <li id="linkstep-item"><a href=""><img id="stepimg3" src="E:\Microsoft VS Code\RS SCHOOL TASKS\rsschool-cv\travel\img\Vector (4).png" alt=""></a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                            <h3 id="destin">POPULAR DESTINATIONS</h3>
+                            <button id="destbutton"><img src="E:\Microsoft VS Code\RS SCHOOL TASKS\rsschool-cv\travel\img\vector s.png" alt="">Find More</button>
+        
+        
+                            <h3 id="stor">TRAVEL STORIES</h3>
+                        <div>
+                            <div>
+                                <img src="E:\Microsoft VS Code\RS SCHOOL TASKS\rsschool-cv\travel\img\Rectangle 15.png" alt="" id="stor1img">
+                                <p id="stor1name">10 Photos of Attractive Thailand</p>
+                                <div id="stor1">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                </br>incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
+                                </br>exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure 
+                                </br>dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+                                </br>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+                                </br>mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit... 
+                                </br>Read More</div>
+                            </div>
+                            <div>
+                                <img src="E:\Microsoft VS Code\RS SCHOOL TASKS\rsschool-cv\travel\img\Rectangle 16.png" alt="" id="stor2img">
+                                <p id="stor2name">Canyonlands National Park, Utah</p>
+                                <div id="stor2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                </br>incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
+                                </br>exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure 
+                                </br>dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+                                </br>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+                                </br>mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit... 
+                                </br>Read More</div>
+                            </div>
+                            <div>
+                                <img src="E:\Microsoft VS Code\RS SCHOOL TASKS\rsschool-cv\travel\img\Rectangle 17.png" alt="" id="stor3img">
+                                <p id="stor3name">I left my heart in the Mountains!</p>
+                                <div id="stor3">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                </br>incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
+                                </br>exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure 
+                                </br>dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+                                </br>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+                                </br>mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit... 
+                                </br>Read More</div>
+                            </div>
+                            <div>
+                                <img src="E:\Microsoft VS Code\RS SCHOOL TASKS\rsschool-cv\travel\img\Rectangle 17 (1).png" alt="" id="stor4img">
+                                <p id="stor4name">The Longest journey in my life!</p>
+                                <div id="stor4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                </br>incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
+                                </br>exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure 
+                                </br>dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+                                </br>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+                                </br>mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit... 
+                                </br>Read More</div>
+                            </div>
+                            <button id="storbutton"><img src="E:\Microsoft VS Code\RS SCHOOL TASKS\rsschool-cv\travel\img\vector s.png" alt=""> See More</button>
+                        </div>
+                </main>
+                <footer id="footer">
+                    <div id="footcontainer">
+                        <div>
+                            <nav id="urlfootlist">
+                                <ul>
+                                    <li><p id="foottext">All Rights Reserved © Travel Portal</p></li>
+                                    <li id="urlfoot-item"><a href=""><img src="E:\Microsoft VS Code\RS SCHOOL TASKS\rsschool-cv\travel\img\akar-icons_instagram-fill.png" alt="" id="urlimg1"></a></li>
+                                    <li id="urlfoot-item"><a href=""><img src="E:\Microsoft VS Code\RS SCHOOL TASKS\rsschool-cv\travel\img\akar-icons_video.png" alt="" id="urlimg2"></a></li>
+                                    <li id="urlfoot-item"><a href=""><img src="E:\Microsoft VS Code\RS SCHOOL TASKS\rsschool-cv\travel\img\akar-icons_twitter-fill.png" alt="" id="urlimg3"></a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </footer>
+                <section class="section-g">
+                    <div class="content-g">
+                    <div class="slider middle">
+                        <div class="slides">
+                        <input type="radio" name="r" id="r1"/>
+                        <input type="radio" name="r" id="r2" checked/>
+                        <input type="radio" name="r" id="r3" />
+                            
+                        <div class="slide s1"><img src="E:\Microsoft VS Code\RS SCHOOL TASKS\rsschool-cv\travel\img\F11.jpg" alt="" /></div>
+                        <div class="slide"><img src="E:\Microsoft VS Code\RS SCHOOL TASKS\rsschool-cv\travel\img\F22.jpg" alt="" /></div>
+                        <div class="slide"><img src="E:\Microsoft VS Code\RS SCHOOL TASKS\rsschool-cv\travel\img\F33.jpg" alt="" /></div>
+                        
+                        </div>
+                        <div class="navigation">
+                        <label for="r1" class="bar"></label>
+                        <label for="r2" class="bar"></label>
+                        <label for="r3" class="bar"></label>
+                        
+                        </div>
+                    </div>
+                    </div>
+                </section>
+                </div>
+                </div>
+            </div>
+        </header>
+    </div>
+</body>
+</html>
